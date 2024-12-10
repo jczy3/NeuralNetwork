@@ -18,4 +18,4 @@ main: ${OBJ}
 	${CC} ${CFLAGS} -c $< -o $@ -lm
 
 clean:
-	rm matrix/*.o *.o neural/*.o util/*.o ${MAIN}
+	rm -f matrix/*.o *.o neural/*.o util/*.o ${MAIN}
