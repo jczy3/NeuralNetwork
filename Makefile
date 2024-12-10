@@ -1,5 +1,5 @@
-C_SOURCES = $(wildcard matrix/*.c neural/*.c util/*.c *.c)
-HEADERS = $(wildcard matrix/*.h neural/*.h util/*.h *.h)
+C_SOURCES = $(wildcard Matrix/*.c Network/*.c IMG/*.c *.c)
+HEADERS = $(wildcard Matrix/*.h Network/*.h IMG/*.h *.h)
 OBJ = ${C_SOURCES:.c=.o}
 CFLAGS = -fopenmp
 
@@ -18,4 +18,4 @@ main: ${OBJ}
 	${CC} ${CFLAGS} -c $< -o $@ -lm
 
 clean:
-	rm matrix/*.o *.o neural/*.o util/*.o ${MAIN}
+	rm Matrix/*.o *.o Network/*.o IMG/*.o ${MAIN}
